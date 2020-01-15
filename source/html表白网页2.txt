@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>LOVE_XL</title>
+
+<style type="text/css">
+@font-face {
+  font-family: digit;
+  src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<div style="text-align:center;clear:both;">
+</div>
+<div id="mainDiv">
+  <div id="content">
+    <div id="code">
+      <span class="comments">LOVE_XL</span><br />
+      <span class="space"/><span class="comments">⭐2017—03-15⭐</span><br />
+      <span class="space"/><span class="comments">⭐2017-03-15⭐</span><br />
+      <span class="space"/><span class="comments"></span><br />
+      男孩名 = <span class="keyword">区</span> 先生<br />
+      女孩名 = <span class="keyword">肖</span> 女士<br /><br />
+      <span class="comments">亲爱的； </span><br />
+      你那水灵灵的大眼睛;<br />
+      <span class="comments">那动人的容颜;</span><br />
+      充满爱和温暖的怀抱;<br />
+      <span class="comments">那活泼可爱的性格;</span><br />
+      已经让我在你的世界里迷失了自我;<br />
+      <span class="comments">除了爱你还是爱你.</span><br />
+      <br />
+      我想说:<br />
+      老婆，我永远爱你;<br />
+      
+        <!--<span class="comments">A</span><br />
+      <span class="comments">B</span><br />
+      <span class="keyword">C</span> D <span class="keyword">E</span>;<br />
+      <span class="keyword">F</span> G <span class="keyword">H</span>;<br />
+      <span class="placeholder"/><span class="comments">I</span><br />
+      <span class="placeholder"/><span class="comments">J</span><br />
+      <span class="placeholder"/>K<br />
+      <span class="comments">L</span><br />
+      <br>
+      <br>-->
+    </div>
+    <div id="loveHeart">
+      <canvas id="garden"></canvas>
+      <div id="words">
+        <div id="messages">
+          亲爱的，这是我们相爱在一起的时光。
+          <div id="elapseClock"></div>
+        </div>
+        <div id="loveu">
+          爱你直到永永远远。<br/>
+          <div class="signature">- 肖女士</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2017, 3, 15);
+together.setHours(24);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+  var msg = document.createElement("div");
+  msg.id = "errorMsg";
+  msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+  document.body.appendChild(msg);
+  $("#code").css("display", "none")
+  $("#copyright").css("position", "absolute");
+  $("#copyright").css("bottom", "10px");
+  document.execCommand("stop");
+} else {
+  setTimeout(function () {
+    startHeartAnimation();
+  }, 5000);
+
+  timeElapse(together);
+  setInterval(function () {
+    timeElapse(together);
+  }, 500);
+
+  adjustCodePosition();
+  $("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
